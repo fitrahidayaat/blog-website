@@ -41,7 +41,7 @@ export default function BlogCard({ id, title, image, subtitle, author, date }) {
             <Link
                 ref={ref}
                 to={`/post?id=${id}`}
-                className="card w-[600px] overflow-hidden"
+                className="card max-w-[600px] overflow-hidden"
             >
                 <div className="max-h-[350px] justify-center flex bg-gray-800 max-w-[600px] overflow-hidden">
                     <img
