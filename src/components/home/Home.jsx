@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
-import homeBg from "../../assets/home-bg.jpg";
+import homeBg from "../../assets/home-bg.avif";
 
 export default function Home() {
     const header = useRef(null);
