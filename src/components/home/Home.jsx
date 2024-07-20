@@ -5,6 +5,8 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
+import homeBg from "../../assets/home-bg.jpg";
+
 export default function Home() {
     const header = useRef(null);
     const title = useRef(null);
@@ -59,7 +61,8 @@ export default function Home() {
             <div className="mb-36">
                 <header
                     ref={header}
-                    className="px-10 bg-[url('https://firebasestorage.googleapis.com/v0/b/blog-website-486d7.appspot.com/o/blogs%2F5fe88c7f-8217-489b-a6a1-d7d540387b85?alt=media&token=524e3ed1-56e3-4d64-85c7-da1a1f45462d')] w-full h-screen flex flex-col items-center bg-cover"
+                    style={{ backgroundImage: `url(${homeBg})` }}
+                    className="px-10 w-full h-screen flex flex-col items-center bg-cover"
                 >
                     <h1
                         ref={title}
