@@ -6,6 +6,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 
 import homeBg from "../../assets/home-bg.avif";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     const header = useRef(null);
@@ -70,14 +71,14 @@ export default function Home() {
                     >
                         Exploring Tech & University Life
                     </h1>
-                    <h2 ref={subtitle} className="text-xl md:text-2xl text-center">
+                    <h2 ref={subtitle} className="text-xl md:text-2xl text-center mb-16">
                         Insights, Reviews, and Reflections on Technology Trends
                         and Campus Adventures
                     </h2>
                     <div ref={ctaButton}>
-                        <button className="mt-6 text-xl md:text-2xl px-8 py-4 bg-white text-black font-bold hover:bg-gray-400 transition-all rounded-full">
+                        <Link to={'/blog'} className="mt-16 text-xl md:text-2xl px-8 py-4 bg-white text-black font-bold hover:bg-gray-400 transition-all rounded-full">
                             Read My Latest Posts
-                        </button>
+                        </Link>
                     </div>
                 </header>
                 <section ref={introduction} className="px-10 sm:px-20 md:px-36 lg:px-48 xl:px-72 h-[400px]">

@@ -25,7 +25,7 @@ export default function BlogCard({ id, title, image, subtitle, author, date }) {
             scrollTrigger: {
                 trigger: ref.current,
                 start: "top 120%",
-                end: "bottom 100%",
+                end: "bottom 80%",
                 scrub: 1,
             },
         });

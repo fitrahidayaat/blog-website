@@ -105,7 +105,7 @@ export default function Pagination({blogs}) {
     });
 
     return (
-        <div className="py-24 px-10 lg:px-12 xl:px-14 flex flex-col items-center" ref={ref}>
+        <div className="py-16 px-10 lg:px-12 xl:px-14 flex flex-col items-center" ref={ref}>
             <h1 className="text-center text-6xl font-bold">Blog</h1>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-10 py-24">
                 {visibleBlogs.map((blog, index) => (
