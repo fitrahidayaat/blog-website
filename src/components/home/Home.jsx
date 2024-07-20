@@ -59,7 +59,7 @@ export default function Home() {
             <div className="mb-36">
                 <header
                     ref={header}
-                    className="px-10 bg-home-bg w-full h-screen flex flex-col items-center bg-cover"
+                    className="px-10 bg-[url('https://firebasestorage.googleapis.com/v0/b/blog-website-486d7.appspot.com/o/blogs%2F5fe88c7f-8217-489b-a6a1-d7d540387b85?alt=media&token=524e3ed1-56e3-4d64-85c7-da1a1f45462d')] w-full h-screen flex flex-col items-center bg-cover"
                 >
                     <h1
                         ref={title}
