@@ -37,7 +37,7 @@ export default function Post({ id, title, image, subtitle, author, date }) {
 
     return (
         <>
-            <div className="overflow-hidden flex gap-10 w-full">
+            <div className="overflow-hidden flex flex-wrap lg:flex-nowrap gap-10 w-full">
                 <div className="max-h-[200px] max-w-[300px] overflow-hidden">
                     <img
                         src={image}

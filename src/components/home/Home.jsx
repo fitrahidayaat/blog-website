@@ -36,7 +36,6 @@ export default function Home() {
 
         gsap.from(ctaButton.current, {
             y: 200,
-            // scale: 0,
             opacity: 0,
             duration: 1,
         });
@@ -95,7 +94,6 @@ export default function Home() {
                         tech enthusiast interested in innovation, join me on
                         this journey of learning and discovery.
                     </p>
-                    
                 </section>
             </div>
             <Footer />

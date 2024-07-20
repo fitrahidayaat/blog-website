@@ -47,8 +47,7 @@ export default function EditPost({ blogs }) {
         };
 
         try {
-
-            if(image != null) {
+            if (image != null) {
                 // Perform image compression
                 const compressedFile = await imageCompression(image, options);
                 console.log(
@@ -56,9 +55,11 @@ export default function EditPost({ blogs }) {
                     compressedFile instanceof Blob
                 ); // true
                 console.log(
-                    `compressedFile size ${compressedFile.size / 1024 / 1024} MB`
+                    `compressedFile size ${
+                        compressedFile.size / 1024 / 1024
+                    } MB`
                 );
-    
+
                 // Upload compressed file to Firebase Storage
                 await uploadBytes(storageRef, compressedFile);
             }
@@ -94,15 +95,21 @@ export default function EditPost({ blogs }) {
 
     return (
         <>
-            <div className="flex flex-col items-center mt-20 mb-20">
+            <div className="flex flex-col items-center mt-20 mb-20 px-6">
                 {showSuccess && (
                     <div className="success-message">
                         Blog edited successfully!
                     </div>
                 )}
-                <img src={imageURL} alt="" className="max-w-[900px]" />
+                <h1 className="text-6xl font-bold mb-20">Edit Post</h1>
+                <img src={imageURL} alt="" className="max-w-[400px] sm:max-w-[500px] md:max-w-[600px] lg:max-w-[900px]" />
                 <div className="flex flex-col gap-2 mt-5">
-                    <label htmlFor="img" className="cursor-pointer bg-blue-800 hover:bg-blue-950 px-4 py-2">Choose File</label>
+                    <label
+                        htmlFor="img"
+                        className="cursor-pointer bg-blue-800 hover:bg-blue-950 px-4 py-2"
+                    >
+                        Choose File
+                    </label>
                     <input
                         id="img"
                         type="file"
@@ -110,12 +117,14 @@ export default function EditPost({ blogs }) {
                         className="hidden"
                         onChange={(event) => {
                             setImage(event.target.files[0]);
-                            setImageURL(URL.createObjectURL(event.target.files[0]));
+                            setImageURL(
+                                URL.createObjectURL(event.target.files[0])
+                            );
                         }}
                     />
                 </div>
                 <form
-                    className="w-[900px] flex flex-col gap-10"
+                    className="max-w-[900px] flex flex-col gap-10"
                     onSubmit={upload}
                 >
                     <div className="flex flex-col gap-2">
@@ -130,7 +139,9 @@ export default function EditPost({ blogs }) {
                             onChange={(event) => setTitle(event.target.value)}
                             maxLength="150"
                         />
-                        <p className="text-gray-400">{title.length}/150 characters</p>
+                        <p className="text-gray-400">
+                            {title.length}/150 characters
+                        </p>
                     </div>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="subtitle">Introduction/Subtitle</label>
@@ -146,7 +157,9 @@ export default function EditPost({ blogs }) {
                                 setSubtitle(event.target.value)
                             }
                         />
-                        <p className="text-gray-400">{subtitle.length}/500 characters</p>
+                        <p className="text-gray-400">
+                            {subtitle.length}/500 characters
+                        </p>
                     </div>
                     <div className="flex flex-col gap-2">
                         <label htmlFor="content">Content</label>

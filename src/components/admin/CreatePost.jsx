@@ -81,7 +81,8 @@ export default function CreatePost() {
                         Blog uploaded successfully!
                     </div>
                 )}
-                <form className="w-[900px] flex flex-col gap-10" onSubmit={upload}>
+                <h1 className="text-6xl font-bold">Create Post</h1>
+                <form className="max-w-[900px] px-6 flex flex-col gap-10" onSubmit={upload}>
                     <img src={image ? URL.createObjectURL(image): ""} alt="" className="max-w-[900px]" />
                     <div className="flex flex-col gap-2">
                         <label htmlFor="img">Image</label>
