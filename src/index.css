@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+#content ul {
+    list-style-type: disc; 
+   list-style-position: inside; 
+}
+
+#content p {
+    padding-top: 10px;
+}
+
+#content ol {
+    list-style-type: decimal; 
+    list-style-position: inside; 
+}
+
+.success-message {
+    background-color: limegreen;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+}
