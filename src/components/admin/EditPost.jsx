@@ -108,12 +108,12 @@ export default function EditPost({ blogs }) {
                         htmlFor="img"
                         className="cursor-pointer bg-blue-800 hover:bg-blue-950 px-4 py-2"
                     >
-                        Choose File
+                        Choose Image
                     </label>
                     <input
                         id="img"
                         type="file"
-                        accept="image/*"
+                        accept="image/*, image/avif, image/webp"
                         className="hidden"
                         onChange={(event) => {
                             setImage(event.target.files[0]);

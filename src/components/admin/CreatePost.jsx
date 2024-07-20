@@ -89,6 +89,7 @@ export default function CreatePost() {
                         <input
                             id="img"
                             type="file"
+                            accept="image/*, image/avif, image/webp"
                             required
                             onChange={(event) =>
                                 setImage(event.target.files[0])
