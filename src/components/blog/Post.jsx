@@ -60,10 +60,6 @@ export default function Post( {blogs} ) {
                             <h2 className="text-lg text-gray-400 my-4">
                                 {blog.subtitle}
                             </h2>
-<<<<<<< HEAD
-=======
-                            <p className="text-gray-400">{blog.author}</p>
->>>>>>> eb16759ab1cce96fce02c8f8757e6a1eaf8bf1bf
                             <p className="text-gray-400 mb-10">{blog.date}</p>
                         </section>
                         <img
